@@ -23,7 +23,7 @@ def search(term):
 
 @app.route('/update')
 def update():
-    print ""
+    print ("")
 
 
 if __name__ == '__main__':
