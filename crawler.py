@@ -17,6 +17,7 @@ def format_address():
                 house.longitude = formatted_address.get("lng")
                 house.formatted = True
                 db.session.add(house)
+                db.session.commit()
         except Exception as e:
             print(e)
 
