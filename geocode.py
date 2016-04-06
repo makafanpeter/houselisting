@@ -42,7 +42,4 @@ def get_services_nearby(latitude, longitude, service_type, radius=1000):
         print (e)
     return None
 
-location = geocode("Osapa, Lekki, Nigeria")
-if location:
-    print  get_services_nearby(latitude= location.get('lat'),longitude=location.get('lng'), service_type='bar')
 
