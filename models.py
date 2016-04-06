@@ -25,15 +25,15 @@ class House(db.Model):
         self.imageUrl = image_url
 
     def __repr__(self):
-        return '<id {}>'.format(self.id)
+        return '<id {0}, name {1}>'.format(self.id, self.name)
 
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
             "id": self.id,
-            "name": self.address,
             "name": self.name,
+            "address": self.address,
             "url": self.url,
             "price": self.price,
             "imageUrl": self.imageUrl
@@ -47,11 +47,12 @@ class HouseFeature(db.Model):
     house_id = db.Column(db.Integer, db.ForeignKey('houses.id'))
     house = relationship(House)
 
-    def __init__(self, name):
+    def __init__(self, name, house_id):
         self.name = name
+        self.house_id = house_id
 
     def __repr__(self):
-        return '<id {}>'.format(self.id)
+        return '<id {0}, name {1}>'.format(self.id, self.name)
 
     @property
     def serialize(self):
