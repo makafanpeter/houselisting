@@ -53,7 +53,6 @@ def crawl():
             result_count = int(re.sub("[^0-9.]*", '', result_count_text[index:]))
             number_of_request = int(result_count / page_size)
             print("Number of Search Result -> ", number_of_request)
-            number_of_request = 0
             for offset in range(0, number_of_request + 1):
                 url = base_url
                 if offset != 0:
