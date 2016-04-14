@@ -4,6 +4,12 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Remote Python 2.7.6 Vagrant VM at C:/Users/peter.makafan/Documents/ubuntu_trusty32 (/home/vagrant/.virtualenvs/houselisting/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="materialize" level="application" />
+    <orderEntry type="library" name="Knockout-2.2.1" level="application" />
+    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
+    <orderEntry type="library" name="google-maps-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="googlemaps-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="underscore" level="application" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

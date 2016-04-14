@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+
+    <div class="col l9 m12 s12">
+        <div id="map-canvas" class="card-panel">
+        </div>
+    </div>
+    <div class="col l3 m12 s12">
+        <div class="search">
+            <div class="search-wrapper card">
+                <input id="search" placeholder="e.g. 3 bed rooms duplex"/>
+                <i class="material-icons">search</i>
+
+            </div>
+
+
+        </div>
+        <div class="card large detail-wrapper">
+            <div class="card-image">
+                <img src="https://images.nigeriapropertycentre.com/properties/images/thumbs/90019/289088_90019-3-bedroom-detached-duplex-with-security-house-in-thomas-estate-ajahlekki-detached-duplexes-for-rent-thomas-estate-ajah-lagos-.jpg">
+                <span class="card-title black-text">&#8358; 900000.0</span>
+            </div>
+            <div class="card-content">
+                <p>3 Bedroom Detached Duplex With Security House In Thomas Estate, Ajah,lekki.</p>
+                <p><i class="tiny material-icons">place</i> Thomas Estate, Ajah, Lagos</p>
+            </div>
+            <div class="card-action">
+                <a href="#"><i class="tiny material-icons">movie</i></a>
+                <a href="#"><i class="tiny material-icons">account_balance</i></a>
+                <a href="#"><i class="tiny material-icons">store_mall_directory</i></a>
+                <a href="#"><i class="tiny material-icons">local_hospital</i></a>
+                <a href="#"><i class="tiny material-icons">school</i></a>
+                <a href="#"><i class="tiny material-icons">security</i></a>
+                <a href="#"><i class="tiny material-icons">flight</i></a>
+                <a href="#"><i class="tiny material-icons">local_gas_station</i></a>
+                <a href="#"><i class="tiny material-icons">local_pharmacy</i></a>
+                <a href="#"><i class="tiny material-icons">restaurant</i></a>
+                <a href="#"><i class="tiny material-icons">local_bar</i></a>
+                <a href="#"><i class="tiny material-icons">local_library</i></a>
+                <a href="#"><i class="tiny material-icons">local_laundry_service</i></a>
+                <a href="#"><i class="tiny material-icons">local_hotel</i></a>
+                <a href="#"><i class="tiny material-icons">local_mall</i></a>
+                <a href="#"><i class="tiny material-icons">local_activity</i></a>
+            </div>
+        </div>
+        <div class="places">
+            <ul class="collapsible" data-collapsible="accordion">
+
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Highland Vegetables</div>
+                    <div class="collapsible-body"><p>No. 30, Arowolo Street, Lagos</p></div>
+                </li>
+                 <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Lexicon Pharmacy and Supermarket</div>
+                    <div class="collapsible-body"><p>No 16, Iwaya Road, Onike-Yaba., Iwaya Road, Lagos</p></div>
+                </li>
+                 <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Asuma's Kiosk</div>
+                    <div class="collapsible-body"><p>Wegbo Street</p></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/typeahead/typeahead.bundle.js') }}"
+        type="application/javascript"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLr4g-AoRm3Q9mM0Gu13x5PiWRJ3m_-iE&&callback=initMap"></script>
+{% endblock %}

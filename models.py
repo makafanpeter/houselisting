@@ -36,7 +36,9 @@ class House(db.Model):
             "address": self.address,
             "url": self.url,
             "price": self.price,
-            "imageUrl": self.imageUrl
+            "imageUrl": self.imageUrl,
+            "longitude": self.longitude,
+            "latitude": self.latitude
         }
 
 

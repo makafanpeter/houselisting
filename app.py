@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify,request
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
@@ -15,10 +15,12 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/search/<string:term>')
-def search(term):
-    houses = House.query.filter_by(term)
-    return jsonify([house.serialize for house in houses])
+@app.route('/search', methods=['GET'])
+def search():
+    term = request.args.get('name', '')
+    houses = House.query.filter(House.name.like("%" + term + "%")).all()
+    # houses = House.query.all()
+    return jsonify(houses=[house.serialize for house in houses])
 
 
 @app.route('/update')
@@ -27,4 +29,4 @@ def update():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0")

@@ -96,4 +96,3 @@ def crawl():
         print(e)
 
 
-crawl()
